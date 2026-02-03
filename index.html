@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NASA Eyes Style Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <div style="font-size: 24px;">🪐</div>
+        <div class="logo-text"><strong>NASA</strong> EYES STYLE <br> SOLAR SYSTEM</div>
+    </div>
+
+    <div class="sidebar">
+        <div class="btn-tool" id="btn-info" title="Info">i</div>
+        <div class="btn-tool" id="btn-layers" title="Layers">☰</div>
+        <div class="btn-tool" id="btn-zoom-in">+</div>
+        <div class="btn-tool" id="btn-zoom-out">−</div>
+        <div class="btn-tool" title="Contrast">◐</div>
+        <div class="btn-tool" id="btn-reset" title="Reset View">⌖</div>
+    </div>
+
+    <div id="layers-menu"></div>
+
+    <div id="info-panel">
+        <h2 id="info-name">System</h2>
+        <p id="info-dist">Select a planet</p>
+    </div>
+
+    <div class="bottom-ui">
+        <div class="live-badge"><div class="dot"></div> LIVE DATA</div>
+        <div class="scrubber">
+            <div class="date-readout" id="date-text">initializing...</div>
+        </div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+    <div id="labels"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
